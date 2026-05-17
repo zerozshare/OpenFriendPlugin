@@ -115,8 +115,9 @@ public final class OpenFriendPlugin extends JavaPlugin implements Listener {
                 (s.presenceRunning ? ChatColor.GREEN + " ✓" : ChatColor.RED + " ✗"));
         player.sendMessage("  " + ChatColor.GRAY + "signaling: " +
                 (s.signalingConnected ? ChatColor.GREEN + "connected" : ChatColor.RED + "disconnected"));
+        boolean bypassInstalled = getServer().getPluginManager().getPlugin("OpenFriendBypass") != null;
         player.sendMessage("  " + ChatColor.GRAY + "bypass: " +
-                (s.bypassEnabled ? ChatColor.GREEN + "enabled" : ChatColor.YELLOW + "off (offline-mode only)"));
+                (bypassInstalled ? ChatColor.GREEN + "installed" : ChatColor.GRAY + "not installed"));
         VersionChecker.Result vr = versionResult;
         if (vr != null && vr.updateAvailable) {
             player.sendMessage(ChatColor.GOLD + "  update available: " + ChatColor.WHITE +

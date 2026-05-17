@@ -31,7 +31,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Properties;
 
-@Plugin(id = "openfriend", name = "OpenFriend", version = "0.1.0", authors = {"ZSHARE"},
+@Plugin(id = "openfriend", name = "OpenFriend", version = "1.0.7", authors = {"ZSHARE"},
         description = "Bridge Minecraft Java Friends List joins (snapshot 26.2+) to a backend server.",
         url = "https://github.com/zerozshare/OpenFriendMC")
 public final class OpenFriendVelocityPlugin {
